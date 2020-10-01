@@ -7,16 +7,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 data = pd.read_csv(r"C:\Users\DELL\Desktop\ML Files\churn data.csv")
-data
+print(data)
 
 ###############################
 #   DATA CLEANING
 ##############################
-data.shape
-data.columns
+print(data.shape)
+print(data.columns)
 data.info()
 ########################
-data.isnull().sum()
+# data.isnull().sum()
 
 ###############################
 #
@@ -59,7 +59,9 @@ x_train, x_test, y_train, y_test=train_test_split(x, y, test_size =0.25, random_
 
 #TRAIN IS 75% AND TEST=25%
 x_train.shape
-x_train.info()
+
+print(x_train.info())
+
 ##########################
 from sklearn.linear_model import LogisticRegression
 #make a model on Logistic Regression
