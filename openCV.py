@@ -1,16 +1,18 @@
 import cv2
 import numpy as np
 
+# reading the image from the computer
 img=cv2.imread(r'C:\Users\DELL\Desktop\Walls\157925-full_download-wallpaper-1920x1080-beach-night-sea-sky-full-hd-hdtv.jpg')
 #h=img/255
 #print(h)
 print(img)
 
+# To show the image
 cv2.imshow('image', img)
 cv2.waitKey(0)
 
 
-
+# writing or creating new image file on the desktop 
 img=cv2.imwrite(r"C:\Users\DELL\Desktop\Walls\dj1.png",img)
 img2=cv2.imread(r"C:\Users\DELL\Desktop\Walls\dj1.png")
 cv2.imshow("image",img2)
@@ -20,6 +22,7 @@ cv2.waitKey(0)
 ############################################################
 img2=cv2.imread(r'C:\Users\DELL\Desktop\Walls\dj1.png')
 
+# creating array using Numpy module
 n=np.ones(img2.shape, dtype="unit8")*150
 new_var=cv2.add(img2, n)
 cv2.imshow(new_var)
